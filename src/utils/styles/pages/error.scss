@@ -1,0 +1,56 @@
+@use '../variables.scss';
+
+.error-wrapper {
+  @include variables.flex-center-column;
+  gap: 100px;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    max-height: 263px;
+    font-size: 250px;
+    font-weight: 700;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  a {
+    color: variables.$tertiary-font-color;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    padding: 86px 20px;
+    gap: 113px;
+
+    h1 {
+      font-size: 200px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    h1 {
+      font-size: 96px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+  }
+}
