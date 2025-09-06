@@ -1,0 +1,37 @@
+@use './components/header.scss';
+
+@use './variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+
+  .root-layout {
+    background-color: variables.$main-color;
+    font-family: variables.$main-font;
+    color: variables.$primary-font-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    gap: 50px;
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      gap: 27px;
+    }
+  }
+
+  .nav-link.active {
+    text-decoration: underline;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

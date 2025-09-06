@@ -1,0 +1,179 @@
+@use '../variables.scss';
+
+.header {
+  background: variables.$main-color;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__brand {
+    color: variables.$primary-font-color;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: clamp(1rem, 2.6vw, 1.25rem);
+
+    &:focus-visible {
+      outline: 2px solid variables.$accent;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Toggle toujours visible (hamburger -> croix) */
+  &__toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid variables.$accent;
+      border-radius: 8px;
+    }
+
+    .header__toggle-bar {
+      position: absolute;
+      left: 9px;
+      right: 9px;
+      height: 2px;
+      background: variables.$primary-font-color;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.2s ease, top 0.3s ease;
+      transform-origin: center;
+    }
+    .header__toggle-bar:nth-of-type(1) {
+      top: 12px;
+    }
+    .header__toggle-bar:nth-of-type(2) {
+      top: 19px;
+    }
+    .header__toggle-bar:nth-of-type(3) {
+      top: 26px;
+    }
+
+    &.is-open {
+      .header__toggle-bar:nth-of-type(1) {
+        top: 19px;
+        transform: rotate(45deg);
+      }
+      .header__toggle-bar:nth-of-type(2) {
+        opacity: 0;
+      }
+      .header__toggle-bar:nth-of-type(3) {
+        top: 19px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  /* Overlay (ferme au clic) */
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  /* Drawer collé à droite (comme la capture) */
+  &__drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: fit-content;
+    background: variables.$drawer-bg; // un peu différent du header pour détacher
+    border-left: 1px solid variables.$drawer-border;
+    z-index: 1110;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 1.25rem;
+
+    overflow-y: auto;
+    overscroll-behavior: contain; // évite les rebonds sur le body
+
+    transform: translateX(100%); // caché à droite
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.32s ease, opacity 0.32s ease, visibility 0.32s ease,
+      box-shadow 0.32s ease;
+    box-shadow: none;
+
+    &.is-open {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      box-shadow: -8px 0 32px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  /* Liens verticaux, uppercase, alignés à droite avec pill actif */
+  &__drawer-link {
+    display: block;
+    text-decoration: none;
+    color: variables.$secondary-font-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.7rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 9999px; // pill
+    white-space: nowrap;
+
+    &:hover {
+      background: variables.$drawer-fg-hover;
+    }
+
+    &.is-active {
+      background: variables.$drawer-active-bg;
+      color: variables.$accent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid variables.$accent;
+      outline-offset: 2px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header__drawer {
+      width: 100vw;
+      max-width: 100vw;
+    }
+  }
+}

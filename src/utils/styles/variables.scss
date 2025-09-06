@@ -1,0 +1,73 @@
+$max-width-desktop: 1440px;
+
+/*fonts*/
+$main-font: 'Montserrat', sans-serif;
+
+/* Base claire */
+$bg: #e2e8f0; // fond page + header (Slate 200)
+$surface: #ffffff; // cartes, sections posées
+$surface-2: #f8fafc; // variante douce (bandeaux)
+$fg: #182836; // texte principal (Slate 900)
+$muted: #475569; // texte secondaire (Slate 600)
+$border: #cbd5e1; // séparateurs/bordures (Slate 300)
+$accent: #60a5fa; // action/brand (Blue 400)
+$accent-hover: #3b82f6; // hover (Blue 500)
+$accent-active: #1d4ed8; // active (Blue 700)
+$accent-bg-subtle: #dbeafe; // fond léger d’accent (Blue 100)
+
+/* Drawer sombre */
+$drawer-bg: #0f1b2a;
+$drawer-fg: #e2e8f0;
+$drawer-fg-hover: #ffffff0f;
+$drawer-border: #ffffff14;
+$drawer-active-bg: #60a5fa2e;
+$drawer-active-fg: #60a5fa;
+
+$shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+$shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+/*colors*/
+$main-color: #f8fafc;
+$secondary-color: #e2e8f0;
+
+/*fonts colors*/
+$primary-font-color: #182836;
+$secondary-font-color: #e2e8f0;
+$tertiary-font-color: #475569;
+$fourth-font-color: #000;
+
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rounded($radius: 25px) {
+  border-radius: $radius;
+}
+
+@mixin max-width-center {
+  width: 100%;
+  max-width: $max-width-desktop;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+@mixin size-24-500 {
+  font-size: 24px;
+  font-weight: 500;
+}

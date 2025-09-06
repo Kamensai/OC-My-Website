@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import RouterLayout from '../../layouts/RouteLayout/index.jsx';
 import Home from '../../pages/Home';
-import About from '../../pages/About/index.jsx';
+import MyAdventure from '../../pages/MyAdventure/index.jsx';
 
 // Composant AppRouter : définit toutes les routes de l'application avec leur layout principal
 
@@ -10,7 +10,7 @@ function AppRouter() {
     <Routes>
       <Route path="/" element={<RouterLayout />}>
         <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/my-adventure" element={<MyAdventure />} />
       </Route>
     </Routes>
   );

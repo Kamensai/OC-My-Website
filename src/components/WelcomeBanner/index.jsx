@@ -1,5 +1,5 @@
 function WelcomeBanner() {
-  return <div className="welcome-banner">Bienvenue sur mon site !</div>;
+  return <section className="welcome-banner">Bienvenue sur mon site !</section>;
 }
 
 export default WelcomeBanner;
