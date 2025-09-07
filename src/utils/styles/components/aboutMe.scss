@@ -1,0 +1,27 @@
+@use '../variables.scss';
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: variables.$secondary-color;
+  border-radius: 10px;
+
+  @media (max-width: 780px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  p {
+    margin: 0 100px;
+    text-align: center;
+    font-size: bolder;
+
+    @media (max-width: 780px) {
+      margin: 0 40px;
+    }
+  }
+}
