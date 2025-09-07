@@ -1,9 +1,12 @@
 @use './variables.scss';
 
 /*pages*/
+@use './pages/home.scss';
 @use './pages/error.scss';
 
 /*components*/
+@use 'components/welcomeBanner.scss';
+@use './components/button.scss';
 @use './components/header.scss';
 
 body {
@@ -19,8 +22,27 @@ body {
     justify-content: space-between;
     width: 100%;
     min-height: 100vh;
-    align-items: center;
     gap: 50px;
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+
+      @media (max-width: 480px) {
+        font-size: 24px;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+
+      @media (max-width: 480px) {
+        font-size: 18px;
+      }
+    }
 
     .hidden {
       display: none;

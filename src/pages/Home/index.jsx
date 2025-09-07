@@ -6,13 +6,13 @@ import WelcomeBanner from '../../components/WelcomeBanner';
 
 function Home() {
   return (
-    <>
+    <section className="home">
       <WelcomeBanner />
       <AboutMe />
       <Projects />
       <Skills />
       <Contact />
-    </>
+    </section>
   );
 }
 

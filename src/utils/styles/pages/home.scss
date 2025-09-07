@@ -1,0 +1,13 @@
+@use '../variables.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @include variables.max-width-center;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
