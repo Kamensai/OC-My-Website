@@ -12,7 +12,11 @@ function WelcomeBanner() {
         </div>
       </div>
       <div className="img-container">
-        <img src={saisanaImg} alt="Une photo de Saisana Khamvongsa" />
+        <img
+          src={saisanaImg}
+          alt="Une photo de Saisana Khamvongsa"
+          loading="lazy"
+        />
       </div>
     </section>
   );

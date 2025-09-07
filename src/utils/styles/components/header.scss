@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 1200;
+  box-shadow: variables.$shadow;
 
   &__inner {
     max-width: 1100px;

@@ -5,6 +5,11 @@
 @use './pages/error.scss';
 
 /*components*/
+@use './components/modale.scss';
+@use './components/projects.scss';
+@use './components/skills.scss';
+@use './components/contact.scss';
+@use './components/card.scss';
 @use './components/aboutMe.scss';
 @use './components/welcomeBanner.scss';
 @use './components/button.scss';
@@ -18,6 +23,7 @@ body {
     background-color: variables.$main-color;
     font-family: variables.$main-font;
     color: variables.$primary-font-color;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
