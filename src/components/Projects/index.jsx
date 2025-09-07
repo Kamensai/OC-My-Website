@@ -15,7 +15,7 @@ function Projects() {
   const closeModal = () => setActive(null);
 
   return (
-    <section id="projets" className="projects">
+    <section id="projects" className="projects">
       <div className="title-container">
         <h1>Projets</h1>
       </div>

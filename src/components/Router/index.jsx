@@ -11,7 +11,6 @@ function AppRouter() {
     <Routes>
       <Route path="/" element={<RouterLayout />}>
         <Route index element={<Home />} />
-        <Route path="/my-adventure" element={<MyAdventure />} />
 
         {/* Page d'erreur pour toute route non trouvée */}
         <Route path="*" element={<Error />} />

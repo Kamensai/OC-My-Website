@@ -1,7 +1,9 @@
+// TODO Page à Alimenter
+
 function MyAdventure() {
   return (
     <div id="my-adventure">
-      <h1>À propos</h1>
+      <h1>Mes Aventures</h1>
     </div>
   );
 }

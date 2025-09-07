@@ -97,14 +97,6 @@ function Header() {
         >
           Accueil
         </NavLink>
-        <NavLink
-          to="/my-adventure"
-          className={({ isActive }) =>
-            `header__drawer-link ${isActive ? 'is-active' : ''}`
-          }
-        >
-          Mon aventure
-        </NavLink>
         <NavHashLink smooth to="/#about-me" className="header__drawer-link">
           À propos
         </NavHashLink>
