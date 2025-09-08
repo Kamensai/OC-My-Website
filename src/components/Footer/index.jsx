@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2023 Saïsana Khamvongsa</p>
+      <p>&copy; 2025 Saïsana Khamvongsa</p>
     </footer>
   );
 }

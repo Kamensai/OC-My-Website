@@ -1,4 +1,4 @@
-import saisanaImg from '../../assets/images/saisana_b_w.webp';
+import saisanaImg from '/images/saisana_b_w_50.webp';
 function WelcomeBanner() {
   return (
     <section className="welcome-banner">
@@ -15,7 +15,9 @@ function WelcomeBanner() {
         <img
           src={saisanaImg}
           alt="Une photo de Saisana Khamvongsa"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
     </section>
