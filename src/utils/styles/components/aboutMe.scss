@@ -5,9 +5,13 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 40px 0;
   background-color: variables.$secondary-color;
   border-radius: 10px;
+
+  .line {
+    @include variables.line(variables.$tertiary-color);
+  }
 
   @media (max-width: 780px) {
     margin-left: 0;

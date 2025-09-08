@@ -30,6 +30,7 @@ $shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.25);
 /*colors*/
 $main-color: #f8fafc;
 $secondary-color: #e2e8f0;
+$tertiary-color: #182836;
 
 /*fonts colors*/
 $primary-font-color: #182836;
@@ -54,6 +55,13 @@ $fourth-font-color: #000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin line($color) {
+  align-self: center;
+  width: 60%;
+  height: 1px;
+  background-color: $color;
 }
 
 @mixin rounded($radius: 25px) {

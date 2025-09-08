@@ -1,7 +1,8 @@
 function Contact() {
   return (
     <section id="contact">
-      <h1>Contact</h1>
+      <h2>Contact</h2>
+      <div className="line" />;
       <form>
         <input type="text" placeholder="Nom" />
         <input type="email" placeholder="Email" />

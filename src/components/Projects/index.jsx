@@ -16,9 +16,8 @@ function Projects() {
 
   return (
     <section id="projects" className="projects">
-      <div className="title-container">
-        <h1>Projets</h1>
-      </div>
+      <h2>Projets</h2>
+      <div className="line" />
       <div className="card-wrapper">
         {projects.map((project) => (
           <Card

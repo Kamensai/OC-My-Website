@@ -1,7 +1,15 @@
+@use '../variables.scss';
+
 .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+
+  .line {
+    @include variables.line(variables.$tertiary-color);
+  }
 
   @media (max-width: 768px) {
     padding: 20px 0;
