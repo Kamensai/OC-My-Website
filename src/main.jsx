@@ -4,15 +4,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router';
-import './utils/styles/main.scss';
 import AppRouter from './components/Router/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* Fournit le routage à toute l'application */}
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       {/* Définit toutes les routes de l'application */}
       <AppRouter />
     </Router>
   </StrictMode>
 );
+import './utils/styles/main.scss';

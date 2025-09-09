@@ -3,7 +3,6 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   @include variables.max-width-center;
 
   @media (max-width: 768px) {

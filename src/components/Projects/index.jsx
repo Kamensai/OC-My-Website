@@ -3,7 +3,11 @@ import { useState } from 'react';
 import Card from '../Card';
 import Modale from '../Modale';
 
-import projects from '../../datas/projects.json';
+import rawProjects from '../../datas/projects.json';
+
+import mapProjectPaths from '../../utils/paths';
+
+const projects = rawProjects.map(mapProjectPaths);
 
 function Projects() {
   const [active, setActive] = useState(null); // project ou null

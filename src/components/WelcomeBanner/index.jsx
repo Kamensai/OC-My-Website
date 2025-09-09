@@ -1,4 +1,3 @@
-import saisanaImg from '/images/saisana_b_w_50.webp';
 function WelcomeBanner() {
   return (
     <section className="welcome-banner">
@@ -13,7 +12,7 @@ function WelcomeBanner() {
       </div>
       <div className="img-container">
         <img
-          src={saisanaImg}
+          src={`${import.meta.env.BASE_URL}images/saisana_b_w_50.webp`}
           alt="Une photo de Saisana Khamvongsa"
           loading="eager"
           fetchPriority="high"

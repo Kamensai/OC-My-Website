@@ -71,6 +71,10 @@
   background: #111b2e;
 } /* fond derrière l'image */
 
+.awssld__content > img {
+  object-position: top center;
+}
+
 .modal__slider .awssld__bullets {
   position: static !important;
   padding: 10px 0;
