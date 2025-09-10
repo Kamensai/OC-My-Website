@@ -1,4 +1,4 @@
-@use '../variables.scss';
+@use '../variables';
 
 .modal {
   position: fixed;
@@ -9,7 +9,7 @@
 .modal__overlay {
   position: absolute;
   inset: 0;
-  background: #00000066;
+  background: #0006;
   border: 0;
 }
 
@@ -29,6 +29,7 @@
   grid-template-rows: auto auto 1fr auto;
   gap: 12px;
 }
+
 .modal__close {
   position: absolute;
   top: 5px;
@@ -42,13 +43,16 @@
   cursor: pointer;
   border-radius: 8px;
 }
+
 .modal__close:hover {
   background: #0000000f;
 }
+
 .modal__close:focus-visible {
   outline: 2px solid #60a5fa;
   outline-offset: 2px;
 }
+
 .modal__close svg {
   width: 20px;
   height: 20px;
@@ -57,11 +61,13 @@
 .modal__slider {
   padding: 40px 40px 10px;
 }
+
 .modal__slider .awssld {
   --slider-height-percentage: 40%; /* ~16/9 */
   --organic-arrow-thickness: 3px;
   --control-bullet-color: #c7cbd1;
   --control-bullet-active-color: #9aa4b2;
+
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   overflow: hidden;
@@ -93,19 +99,23 @@
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: variables.$primary-font-color;
 }
+
 .modal__heading a {
+  color: inherit;
   text-decoration: none;
 }
+
 .modal__meta {
   color: #64748b;
   margin-top: 4px;
 }
+
 .modal__desc {
   margin: 8px 0 0;
   line-height: 1.55;
 }
 
-@media (max-width: 720px) {
+@media (width <= 720px) {
   .modal__panel {
     width: 94vw;
     top: 20vh;

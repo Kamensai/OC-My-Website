@@ -1,4 +1,4 @@
-@use '../variables.scss';
+@use '../variables';
 
 .about-me {
   display: flex;
@@ -13,7 +13,7 @@
     @include variables.line(variables.$tertiary-color);
   }
 
-  @media (max-width: 780px) {
+  @media (width <= 780px) {
     margin-left: 0;
     margin-right: 0;
     padding: 10px;
@@ -24,7 +24,7 @@
     text-align: center;
     font-size: bolder;
 
-    @media (max-width: 780px) {
+    @media (width <= 780px) {
       margin: 0 40px;
     }
   }

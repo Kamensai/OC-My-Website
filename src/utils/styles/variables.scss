@@ -1,11 +1,11 @@
 $max-width-desktop: 1440px;
 
-/*fonts*/
+/* fonts */
 $main-font: 'Montserrat', sans-serif;
 
 /* Base claire */
 $bg: #e2e8f0; // fond page + header (Slate 200)
-$surface: #ffffff; // cartes, sections posées
+$surface: #fff; // cartes, sections posées
 $surface-2: #f8fafc; // variante douce (bandeaux)
 $fg: #182836; // texte principal (Slate 900)
 $muted: #475569; // texte secondaire (Slate 600)
@@ -22,33 +22,19 @@ $drawer-fg-hover: #ffffff0f;
 $drawer-border: #ffffff14;
 $drawer-active-bg: #60a5fa2e;
 $drawer-active-fg: #60a5fa;
+$shadow: 0 4px 8px rgb(0 0 0 / 8%);
+$shadow-hover: 0 8px 24px rgb(117 93 93 / 25%);
 
-$shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-
-$shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.25);
-
-/*colors*/
+/* colors */
 $main-color: #f8fafc;
 $secondary-color: #e2e8f0;
 $tertiary-color: #182836;
 
-/*fonts colors*/
+/* fonts colors */
 $primary-font-color: #182836;
 $secondary-font-color: #e2e8f0;
 $tertiary-font-color: #475569;
 $fourth-font-color: #000;
-
-@mixin flex-between-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 @mixin flex-center-column {
   display: flex;
@@ -73,9 +59,4 @@ $fourth-font-color: #000;
   max-width: $max-width-desktop;
   padding: 0 100px;
   box-sizing: border-box;
-}
-
-@mixin size-24-500 {
-  font-size: 24px;
-  font-weight: 500;
 }

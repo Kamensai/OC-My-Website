@@ -1,6 +1,5 @@
-@use '../variables.scss';
-
-@use './skillCard.scss';
+@use '../variables';
+@use './skillCard';
 
 .skills {
   display: flex;
@@ -22,7 +21,7 @@
   &__container {
     display: grid;
 
-    @media (max-width: 900px) {
+    @media (width <= 900px) {
       grid-template-columns: 1fr;
     }
   }
@@ -33,7 +32,7 @@
 
   &__heading {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     font-size: clamp(1.1rem, 2.4vw, 1.3rem);
   }
 

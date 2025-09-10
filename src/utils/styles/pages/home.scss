@@ -1,11 +1,12 @@
-@use '../variables.scss';
+@use '../variables';
 
 .home {
   display: flex;
   flex-direction: column;
+
   @include variables.max-width-center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     gap: 20px;
     padding: 0 20px;
   }

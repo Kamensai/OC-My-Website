@@ -8,6 +8,7 @@
       "images/kasa_a_propos.webp",
       "images/kasa_erreur.webp"
     ],
+    "link": "https://github.com/Kamensai/OC-P5-kasa",
     "description": "Refonte totale du site web immobilier Kasa. Utilisation de JavaScript avec NodeJS côté back-end, et React côté front-end. Je me suis occupé de la partie front avec React.",
     "client": { "name": "Kasa" }
   },
@@ -20,6 +21,7 @@
       "images/grimoire_ajout_livre.webp",
       "images/grimoire_modification.webp"
     ],
+    "link": "https://github.com/Kamensai/OC-P6-Grimoire",
     "description": "Il s’agit d’une petite chaîne de librairies qui souhaite ouvrir un site de référencement et de notation de livres : Mon Vieux Grimoire. Mon travail était de développer la partie backend avec Node.js et Express.",
     "client": {
       "name": "Mon vieux Grimoire"

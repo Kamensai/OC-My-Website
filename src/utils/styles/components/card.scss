@@ -1,22 +1,18 @@
-@use '../variables.scss';
+@use '../variables';
 
 figure {
-  background: #ffffff;
+  background: #fff;
   display: inline-block;
   margin: 55px 30px 40px;
   padding: 15px 15px 30px;
   text-align: center;
   text-decoration: none;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
   transition: all 0.2s linear;
   cursor: pointer;
   position: relative;
 
-  @media (max-width: 938px) {
+  @media (width <= 938px) {
     margin: 55px 0 40px;
   }
 }
@@ -36,16 +32,12 @@ figure img {
   display: block;
   width: 250px;
 
-  @media (max-width: 938px) {
+  @media (width <= 938px) {
     width: 100%;
   }
 }
 
 figure:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
   transform: scale(1.2);
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 70%);
 }

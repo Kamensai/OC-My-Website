@@ -1,7 +1,8 @@
-@use '../variables.scss';
+@use '../variables';
 
 .contact {
   @include variables.flex-center-column;
+
   padding: 40px 0;
   gap: 20px;
 
@@ -9,7 +10,7 @@
     @include variables.line(variables.$tertiary-color);
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     gap: 10px;
   }
 
@@ -21,7 +22,7 @@
     padding: 40px 0;
     gap: 20px;
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       flex-direction: column;
       gap: 40px;
     }
@@ -33,7 +34,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
     border-radius: 10px;
     color: variables.$tertiary-color;
     text-decoration: none;
@@ -42,8 +43,15 @@
     cursor: pointer;
   }
 
+  &__icon {
+    width: 36px;
+    height: 36px;
+    stroke-width: 2.2; /* trait un peu plus gras */
+    color: variables.$tertiary-color; /* hérite facilement */
+  }
+
   &__item:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 12px rgb(0 0 0 / 30%);
 
     .contact__icon,
     .contact__text {
@@ -53,13 +61,6 @@
 
   &__item:hover .contact__icon {
     transform: scale(1.1);
-  }
-
-  &__icon {
-    width: 36px;
-    height: 36px;
-    stroke-width: 2.2; /* trait un peu plus gras */
-    color: variables.$tertiary-color; /* hérite facilement */
   }
 
   &__item:focus-visible {

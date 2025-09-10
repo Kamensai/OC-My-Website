@@ -1,0 +1,15 @@
+{
+  "customSyntax": "postcss-scss",
+  "extends": ["stylelint-config-standard-scss"],
+  "rules": {
+    "color-hex-length": "short",
+
+    "selector-class-pattern": [
+      "^(?:u-|is-|has-)?(?:(?:awssld.*|devicon.*|tenor-gif-embed)|[a-z0-9]+(?:-[a-z0-9]+)*(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?)$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Utilise le schéma BEM : block__element--modifier (kebab-case)."
+      }
+    ]
+  }
+}
